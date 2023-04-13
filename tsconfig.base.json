@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@shared-ui/*": ["shared/ui/src/lib/*"],
       "@google-book-store/shared/ui": ["shared/ui/src/index.ts"],
       "@google-book-store/store": ["store/src/index.ts"]
     }

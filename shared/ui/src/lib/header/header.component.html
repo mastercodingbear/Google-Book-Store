@@ -1,0 +1,27 @@
+<mat-toolbar>
+  <button
+    mat-icon-button
+    class="!inline-block sm:!hidden"
+    aria-label="Mobile menu icon button"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Google Book Store</span>
+  <mat-form-field class="ml-auto" subscriptSizing="dynamic">
+    <input
+      matInput
+      type="text"
+      placeholder="Search books..."
+      [(ngModel)]="searchTerm"
+    />
+    <button
+      *ngIf="searchTerm"
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="searchTerm = ''"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+</mat-toolbar>

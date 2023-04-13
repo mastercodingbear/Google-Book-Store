@@ -40,6 +40,7 @@ export class HeaderComponent {
       this.router.navigate([], {
         relativeTo: this.route,
         queryParams: { q: query },
+        queryParamsHandling: 'merge',
       });
     });
     this.route.queryParams.subscribe((params) => {

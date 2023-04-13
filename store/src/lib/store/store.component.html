@@ -1,1 +1,24 @@
-<p>store works!</p>
+<ng-container *ngIf="query !== ''; else empty">
+  <ng-container *ngIf="loading$ | async; else storeTemplate">
+    <div
+      class="fixed backdrop-blur-sm w-screen h-screen flex items-center justify-center"
+    >
+      <mat-progress-spinner color="primary" mode="indeterminate">
+      </mat-progress-spinner>
+    </div>
+  </ng-container>
+  <ng-template #storeTemplate>
+    <div class="flex flex-col px-4 my-6">
+      <div class="mb-4 flex justify-between">
+        <h1 class="text-3xl mb-4">Search Result</h1>
+      </div>
+      <google-book-store-list
+        [books]="repo.books$ | async"
+      ></google-book-store-list>
+    </div>
+  </ng-template>
+</ng-container>
+
+<ng-template #empty>
+  <h1 class="text-2xl text-gray-900 text-center mt-10">Search books</h1>
+</ng-template>

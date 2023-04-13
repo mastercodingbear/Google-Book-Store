@@ -15,9 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@shared-ui/*": ["shared/ui/src/lib/*"],
       "@google-book-store/shared/ui": ["shared/ui/src/index.ts"],
-      "@google-book-store/store": ["store/src/index.ts"]
+      "@google-book-store/store": ["store/src/index.ts"],
+      "@services": ["src/app/services/index.ts"],
+      "@shared-ui/*": ["shared/ui/src/lib/*"],
+      "@states": ["src/app/states/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -13,13 +13,14 @@
       type="text"
       placeholder="Search books..."
       [(ngModel)]="searchTerm"
+      (ngModelChange)="onSearch()"
     />
     <button
       *ngIf="searchTerm"
       matSuffix
       mat-icon-button
       aria-label="Clear"
-      (click)="searchTerm = ''"
+      (click)="onClear()"
     >
       <mat-icon>close</mat-icon>
     </button>
